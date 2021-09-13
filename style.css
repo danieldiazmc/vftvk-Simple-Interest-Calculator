@@ -1,4 +1,62 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background-color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+h1{
+    color:gray;
+    font-size: 39px;
+}
 
+.form-group{
+    padding-left: 85px;
+    margin: 12px 0;
+}
+
+button{
+    margin-left:85px;
+    width: 120px;
+}
+label {
+    /* Other styling... */
+    float:left;
+    margin-right:15px;
+    width: 120px;
+    text-align: left;
+}
+
+input[type=number]{
+    width: 120px;
+}
+
+p{
+    margin: 0 0 0 85px;
+    padding: 0;
+}
+
+span{
+    background-color: #FFFF00;
+}
+
+footer{
+    margin-top: 20px;
+}
+
+footer > span{
+    background: none ;
+    font-size: 25px;
+}
+
+#interest{
+    display: none;
+    margin-top: 16px;
+}
+
+.card{
+    margin-left:40px ;
+    background: white;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px 20px 20px 10px;
+    width: fit-content;
+}
