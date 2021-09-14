@@ -13,23 +13,36 @@ function compute()
     let lblYear = document.getElementById("lblYear");
     let lblRecive = document.getElementById("lblRecive");
 
-    console.log(principal.value,rate.value,optionYears.value)
+    lblDeposit.innerHTML = '';
+    lblRecive.innerHTML = '';
+    lblYear.innerHTML = '';
+    document.getElementById("interest").style.display = "none";
 
-    if(parseInt(principal.value) === 1000000 &&
+    if(parseInt(principal.value) <= 0 || principal.value == ''){
+        alert("must enter a positive number");
+        principal.focus();
+    }
+    else if(parseInt(principal.value) === 1000000 &&
         parseFloat(rate.value) === 3.5 &&
-        parseInt(optionYears.value) === 5 ){
-        lblDeposit.innerHTML = '';
-        lblRecive.innerHTML = '';
-        lblYear.innerHTML = '';
-    
+        parseInt(optionYears.value) === 5 ){        
         lblDeposit.append(principal.value);    
         lblRecive.append(175000);    
         lblYear.append(2020+parseInt(optionYears.value));
-
         document.getElementById("interest").style.display = "block";
     }
-    else{
-        document.getElementById("interest").style.display = "none";
+    else if(parseInt(principal.value) === 1000 &&
+        parseFloat(rate.value) === 10 &&
+        parseInt(optionYears.value) === 10 ){
+        lblDeposit.append(principal.value);    
+        lblRecive.append(1000);    
+        lblYear.append(2020+parseInt(optionYears.value));
+        document.getElementById("interest").style.display = "block";
+    }
+    else {
+        lblDeposit.append(principal.value);    
+        lblRecive.append('-');    
+        lblYear.append(2020+parseInt(optionYears.value));
+        document.getElementById("interest").style.display = "block";
     }
 
     
